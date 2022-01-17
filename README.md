@@ -3,8 +3,7 @@ git config --global user.name "Teljes username"
 
 git config --global user.email "Emailcimünk"
 
-Ez lesz az alap tokenünk, amit Passwordként használunk mindketten!
-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
+Ez lesz az alap tokenünk, amit Passwordként használunk mindketten! -> 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
 
 először a gépünkre lementjük a fent lévő legújabb verziót -> git pull
 
@@ -16,5 +15,4 @@ git add . <- minden módosítást hozzáadtunk az 2indexbe"
 
 git commit -m "Vmi komment" <- módosítások véglegesítése
 
-git push <- a munkánkat feltöltjük a repónkba githubon 
-Itt újra kérni fogja a usernamet és a Tokent (jobb egér és Paste)
+git push <- a munkánkat feltöltjük a repónkba githubon. Itt újra kérni fogja a usernamet és a Tokent (jobb egér és Paste).
