@@ -5,6 +5,8 @@ git config --global user.email "Emailcimünk"
 
 Ez lesz az alap tokenünk, amit Passwordként használunk mindketten! -> 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
 
+Be kell lépnünk a megfelelő repos mappánkba a saját gépünkön -> cd MarkLaci
+
 először a gépünkre lementjük a fent lévő legújabb verziót -> git pull
 
 megcsináljuk a megcsinálandót
