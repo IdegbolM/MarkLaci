@@ -9,3 +9,4 @@
 #git add . <- minden módosítást hozzáadtunk az 2indexbe"
 #git commit -m "Vmi komment" <- módosítások véglegesítése
 #git push <- a munkánkat feltöltjük a repónkba githubon
+ Itt újra kérni fogja a usernamet és a Tokent (jobb egér és Paste)
