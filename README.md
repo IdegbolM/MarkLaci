@@ -1,7 +1,7 @@
 # MarkLaci
 git config --global user.name "Teljes username"
-\n git config --global user.email "Emailcimünk"
- Ez lesz az alap tokenünk, amit Passwordként használunk mindketten!
+"\n" git config --global user.email "Emailcimünk"
+'\n' Ez lesz az alap tokenünk, amit Passwordként használunk mindketten!
  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
  először a gépünkre lementjük a fent lévő legújabb verziót -> git pull
  megcsináljuk a megcsinálandót
