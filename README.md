@@ -7,7 +7,7 @@ Ez lesz az alap tokenünk, amit Passwordként használunk mindketten! -> ghp_mTU
 
 Be kell lépnünk a megfelelő repos mappánkba a saját gépünkön -> cd MarkLaci
 
-először a gépünkre lementjük a fent lévő legújabb verziót -> git pull
+először a gépünkre lementjük a fent lévő legújabb verziót -> git pull (nem kötelező, már megcsinálta)
 
 megcsináljuk a megcsinálandót
 
@@ -32,3 +32,5 @@ Hőm. és Páratart. érzékelő AM2320 -> http://www.pibits.net/code/am2320-tem
 Breadboardokhoz -> https://www.youtube.com/watch?v=6Hau75Zkpj4
 
 PWM -> https://www.youtube.com/watch?v=zh9kjHOrl6U&t=1s
+
+Ledünk neve -> 
