@@ -33,4 +33,4 @@ Breadboardokhoz -> https://www.youtube.com/watch?v=6Hau75Zkpj4
 
 PWM -> https://www.youtube.com/watch?v=zh9kjHOrl6U&t=1s
 
-Ledünk neve -> 
+Ledünk neve -> WS2812B
