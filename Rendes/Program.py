@@ -41,6 +41,8 @@ draw = ImageDraw.Draw(image)
 # Draw a white background
 draw.rectangle((0, 0, oled.width, oled.height), outline=255, fill=255)
 
+
+
 font = ImageFont.truetype('PixelOperator.ttf', 16)
 #font = ImageFont.load_default()
 
@@ -48,22 +50,31 @@ while True:
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, oled.width, oled.height), outline=0, fill=0)
+    
+    cmd = "hostname -I | cut -d\' \' -f1"
+    IP = subprocess.check_output(cmd, shell = True )
+    cmd = "top -bn1 | grep load | awk '{printf \"CPU: %.2f\", $(NF-2)}'"
+    CPU = subprocess.check_output(cmd, shell = True )
+    cmd = "free -m | awk 'NR==2{printf \"Mem: %s/%sMB %.2f%%\", $3,$2,$3*100/$2 }'"
+    MemUsage = subprocess.check_output(cmd, shell = True )
+    cmd = "df -h | awk '$NF==\"/\"{printf \"Disk: %d/%dGB %s\", $3,$2,$5}'"
+    Disk = subprocess.check_output(cmd, shell = True )
+    cmd = "vcgencmd measure_temp |cut -f 2 -d '='"
+    temp = subprocess.check_output(cmd, shell = True )
 
     TEMP=am.temperature
     HUM=am.relative_humidity
 
     # Pi Stats Display
     draw.text((0, 0), "Homerseklet: " + str(TEMP) + " C°", font=font, fill=255)
-    draw.text((0, 16), "Paratartalom: " + str(HUM), font=font, fill=255)
+    draw.text((0, 16), "Paratartalom: " + str(HUM) + "%", font=font, fill=255) 
 
         
     # Display image
     oled.image(image)
     oled.show()
-    for i in range(14):
-        time.sleep(0.5)
-    oled.fill(0)
-    oled.show()
-    break
+    time.sleep(.3)
+
+
 
 
