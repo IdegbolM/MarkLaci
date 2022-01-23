@@ -3,13 +3,15 @@ import board
 import busio
 import digitalio
 import adafruit_am2320
-
+import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_ssd1306
 
 import subprocess
 
+#idovel kapcsolatos beallitasok
+now=datetime.datetime.now()
 
 # create the I2C shared bus
 i2c = board.I2C()  # uses board.SCL and board.SDA
@@ -66,8 +68,10 @@ while True:
     HUM=am.relative_humidity
 
     # Pi Stats Display
-    draw.text((0, 0), "Homerseklet: " + str(TEMP) + " C°", font=font, fill=255)
-    draw.text((0, 16), "Paratartalom: " + str(HUM) + "%", font=font, fill=255) 
+    draw.text((0, 0), "Hömérséklet: " + str(TEMP) + " C°", font=font, fill=255)
+    draw.text((0, 16), "Páratartalom: " + str(HUM) + "%", font=font, fill=255)
+    draw.text((0, 32), "Utoljára mérve: ", font=font, fill=255)
+    draw.text((39, 48), now.strftime("%H:%M:%S"), font=font, fill=255)
 
         
     # Display image
