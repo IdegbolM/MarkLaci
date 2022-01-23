@@ -64,7 +64,7 @@ while True:
     # Display image
     oled.image(image)
     oled.show()
-    for i in range(60):
+    for i in range(20):
         time.sleep(0.5)
     oled.fill(0)
     oled.show()
