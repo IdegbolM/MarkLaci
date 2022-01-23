@@ -1,1 +1,6 @@
 https://www.pythontutorial.net/python-basics/python-write-text-file/
+
+datetime.datetime.now().time()
+datetime.time(15, 8, 24, 78915)
+
+>>> print(datetime.datetime.now().time())
