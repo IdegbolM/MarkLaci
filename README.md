@@ -6,9 +6,6 @@ Készítette:
 
 Kocsis Márk - G9KUB3	Gál László - HGH0BN
 
-Ez lesz az alap tokenünk, amit Passwordként használunk mindketten! -> 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
-
-Ledünk neve -> WS2812B
-
-OLED műödtetése -> python Program.py
-LED csík működtetése -> sudo python3 LED_mi.py
+- A wiki home oldala **[itt](https://github.com/IdegbolM/MarkLaci/wiki)** érhető el.
+- A felhasználói útmutató **[itt](https://github.com/IdegbolM/MarkLaci/wiki/Felhaszn%C3%A1l%C3%B3i-%C3%BAtmutat%C3%B3)** érhető el.
+- A fejlesztői dokumentáció **[itt](https://github.com/IdegbolM/MarkLaci/wiki/Fejleszt%C5%91i-dokument%C3%A1ci%C3%B3)** érhető el.
