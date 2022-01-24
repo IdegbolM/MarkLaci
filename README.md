@@ -4,7 +4,8 @@ Hőmérséklet és Páratartalmat leolvasó, kiíró rendszer + irodába LED fé
 
 Készítette:
 
-Kocsis Márk - G9KUB3	Gál László - HGH0BN
+Kocsis Márk - G9KUB3	 
+Gál László - HGH0BN
 
 - A wiki home oldala **[itt](https://github.com/IdegbolM/MarkLaci/wiki)** érhető el.
 - A felhasználói útmutató **[itt](https://github.com/IdegbolM/MarkLaci/wiki/Felhaszn%C3%A1l%C3%B3i-%C3%BAtmutat%C3%B3)** érhető el.
