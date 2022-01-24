@@ -4,6 +4,7 @@ import busio
 import digitalio
 import adafruit_am2320
 import datetime
+import tweepy
 
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_ssd1306
@@ -12,6 +13,7 @@ import subprocess
 
 #idovel kapcsolatos beallitasok
 now=datetime.datetime.now()
+
 
 # create the I2C shared bus
 i2c = board.I2C()  # uses board.SCL and board.SDA
@@ -33,6 +35,12 @@ oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_re
 oled.fill(0)
 oled.show()
 
+
+auth = tweepy.OAuthHandler('xWaOHMW9GSNgjsr8ShNu3LO1R','0TgRFHwvwouqziWclqtISPWajliqoR0RjAwyNJmyfQUtjXd5gg')
+auth.set_access_token('1450813593969123330-r1sSJVNPCUujRXbdNa6kbrQR9Iz3qJ','POBpiQTXpVU2UWKXOPuRHsi8dpUgWQKaHgOnktBGAdNsM')
+
+api = tweepy.API(auth)
+
 # Create blank image for drawing.
 # Make sure to create image with mode '1' for 1-bit color.
 image = Image.new("1", (oled.width, oled.height))
@@ -48,11 +56,14 @@ draw.rectangle((0, 0, oled.width, oled.height), outline=255, fill=255)
 font = ImageFont.truetype('PixelOperator.ttf', 16)
 #font = ImageFont.load_default()
 
-while True:
+i=0
+
+while (i<28):
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, oled.width, oled.height), outline=0, fill=0)
     
+    now=datetime.datetime.now()
     cmd = "hostname -I | cut -d\' \' -f1"
     IP = subprocess.check_output(cmd, shell = True )
     cmd = "top -bn1 | grep load | awk '{printf \"CPU: %.2f\", $(NF-2)}'"
@@ -77,7 +88,16 @@ while True:
     # Display image
     oled.image(image)
     oled.show()
-    time.sleep(.3)
+    time.sleep(.1)
+    i+=1
+    if(i==28):
+        oled.fill(0)
+        oled.show()
+        sztring = "Hőmérséklet: " + str(TEMP) + " C°, Páratartalom: " + str(HUM) + " %, Mérés ideje " + str (now.strftime("%H:%M:%S"))
+        api.update_status(sztring)
+        print("Kiíratás", sztring)
+    
+    
 
 
 

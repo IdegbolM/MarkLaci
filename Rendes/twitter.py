@@ -7,12 +7,15 @@
 
 
 import tweepy
-import random
+import datetime
+now=datetime.datetime.now()
 
 auth = tweepy.OAuthHandler('xWaOHMW9GSNgjsr8ShNu3LO1R','0TgRFHwvwouqziWclqtISPWajliqoR0RjAwyNJmyfQUtjXd5gg')
 auth.set_access_token('1450813593969123330-r1sSJVNPCUujRXbdNa6kbrQR9Iz3qJ','POBpiQTXpVU2UWKXOPuRHsi8dpUgWQKaHgOnktBGAdNsM')
 
+ido=now.strftime("%H:%M:%S")
+
 api = tweepy.API(auth)
-randomszam = random.randrange(1,100)
-api.update_status(str(randomszam))
-print("sikeresen tweetelve az, hogy ", randomszam)
+
+api.update_status(str(ido))
+print("sikeresen tweetelve az, hogy ", ido)
