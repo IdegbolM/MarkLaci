@@ -58,7 +58,7 @@ font = ImageFont.truetype('PixelOperator.ttf', 16)
 
 i=0
 
-while (i<28):
+while (i<100):
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, oled.width, oled.height), outline=0, fill=0)
@@ -90,7 +90,7 @@ while (i<28):
     oled.show()
     time.sleep(.1)
     i+=1
-    if(i==28):
+    if(i==100):
         oled.fill(0)
         oled.show()
         sztring = "Hőmérséklet: " + str(TEMP) + " C°, Páratartalom: " + str(HUM) + " %, Mérés ideje " + str (now.strftime("%H:%M:%S"))
