@@ -93,7 +93,7 @@ while (i<100):
     if(i==100):
         oled.fill(0)
         oled.show()
-        sztring = "Hőmérséklet: " + str(TEMP) + " C°, Páratartalom: " + str(HUM) + " %, Mérés ideje " + str (now.strftime("%H:%M:%S"))
+        sztring = "Hőmérséklet: " + str(TEMP) + " C°, Páratartalom: " + str(HUM) + " %, Mérés ideje: " + str (now.strftime("%H:%M:%S"))
         api.update_status(sztring)
         print("Tweetelés->\n", sztring)
     
